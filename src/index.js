@@ -2,14 +2,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+
+
+
+
 // Create a react component
 //component is a function OR class - produces HTML to show the user (using JSX) and handles feedback from the user (Using event handlers)
+
 const App = () => {
+    const buttonText = {text: 'Click me'};
+    const labelText = 'Enter name:';
+
     return (    //convention for react multi-line elements
         <div>
-            <label class="label" for="name">Enter name</label>
+            <label className="label" htmlFor="name">
+                {labelText}
+            </label>
             <input id="name" type="text"/>
-            <button style= {{background: 'blue', color: 'white' }}>Submit</button>
+            <button style= {{ background: 'blue', color: 'white' }}>
+                {buttonText.text}
+            </button>
         </div>
     );
 };
